@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervical Cancer Prediction - Result</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .prediction-text {
+            margin-top: 20px;
+        }
+        .prediction-text.positive {
+            color: red;
+        }
+        .prediction-text.negative {
+            color: green;
+        }
+        .input-data {
+            margin-top: 20px;
+        }
+        .input-data h3 {
+            margin-bottom: 10px;
+        }
+        .input-data ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .input-data li {
+            margin-bottom: 5px;
+        }
+    </style>
+</head>
+<body>
+    <div class="container text-center">
+        <h1 class="text-center">Prediction Result</h1>
+        <h2 class="prediction-text {{ 'positive' if prediction_text == 'Positive' else 'negative' }}">{{ prediction_text }}</h2>
+        <h5 class="text-secondary">Model Accuracy: {{ accuracy_model }}</h5>
+        <div class="input-data">
+            <h3>Input Data:</h3>
+            <ul class="list-group">
+                <li class="list-group-item">Behavior Sexual Risk: {{ input_data[0] }}</li>
+                <li class="list-group-item">Behavior Eating: {{ input_data[1] }}</li>
+                <li class="list-group-item">Behavior Personal Hygiene: {{ input_data[2] }}</li>
+                <li class="list-group-item">Intention Aggregation: {{ input_data[3] }}</li>
+                <li class="list-group-item">Intention Commitment: {{ input_data[4] }}</li>
+                <li class="list-group-item">Attitude Consistency: {{ input_data[5] }}</li>
+                <li class="list-group-item">Attitude Spontaneity: {{ input_data[6] }}</li>
+                <li class="list-group-item">Norm Significant Person: {{ input_data[7] }}</li>
+                <li class="list-group-item">Norm Fulfillment: {{ input_data[8] }}</li>
+                <li class="list-group-item">Perception Vulnerability: {{ input_data[9] }}</li>
+                <li class="list-group-item">Perception Severity: {{ input_data[10] }}</li>
+                <li class="list-group-item">Motivation Strength: {{ input_data[11] }}</li>
+                <li class="list-group-item">Motivation Willingness: {{ input_data[12] }}</li>
+                <li class="list-group-item">Social Support Emotionality: {{ input_data[13] }}</li>
+                <li class="list-group-item">Social Support Appreciation: {{ input_data[14] }}</li>
+                <li class="list-group-item">Social Support Instrumental: {{ input_data[15] }}</li>
+                <li class="list-group-item">Empowerment Knowledge: {{ input_data[16] }}</li>
+                <li class="list-group-item">Empowerment Abilities: {{ input_data[17] }}</li>
+                <li class="list-group-item">Empowerment Desires: {{ input_data[18] }}</li>
+            </ul>
+        </div>
+        <a href="/" class="btn btn-primary btn-block">Back to Input Data</a>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>

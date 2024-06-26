@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Cervical Cancer Prediction - Input Data</title>
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" rel="stylesheet">
+    <style>
+        body {
+            background-color: #f8f9fa;
+        }
+        .container {
+            margin-top: 50px;
+            max-width: 600px;
+            background: white;
+            padding: 30px;
+            border-radius: 10px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+        }
+        .form-group label {
+            font-weight: bold;
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1 class="text-center">Cervical Cancer Prediction</h1>
+        <form id="prediction-form" action="/predict" method="post">
+            <div class="form-group">
+                <label for="behavior_sexualRisk">Behavior Sexual Risk:</label>
+                <input type="number" class="form-control" name="behavior_sexualRisk" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="behavior_eating">Behavior Eating:</label>
+                <input type="number" class="form-control" name="behavior_eating" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="behavior_personalHygiene">Behavior Personal Hygiene:</label>
+                <input type="number" class="form-control" name="behavior_personalHygiene" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="intention_aggregation">Intention Aggregation:</label>
+                <input type="number" class="form-control" name="intention_aggregation" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="intention_commitment">Intention Commitment:</label>
+                <input type="number" class="form-control" name="intention_commitment" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="attitude_consistency">Attitude Consistency:</label>
+                <input type="number" class="form-control" name="attitude_consistency" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="attitude_spontaneity">Attitude Spontaneity:</label>
+                <input type="number" class="form-control" name="attitude_spontaneity" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="norm_significantPerson">Norm Significant Person:</label>
+                <input type="number" class="form-control" name="norm_significantPerson" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="norm_fulfillment">Norm Fulfillment:</label>
+                <input type="number" class="form-control" name="norm_fulfillment" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="perception_vulnerability">Perception Vulnerability:</label>
+                <input type="number" class="form-control" name="perception_vulnerability" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="perception_severity">Perception Severity:</label>
+                <input type="number" class="form-control" name="perception_severity" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="motivation_strength">Motivation Strength:</label>
+                <input type="number" class="form-control" name="motivation_strength" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="motivation_willingness">Motivation Willingness:</label>
+                <input type="number" class="form-control" name="motivation_willingness" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="socialSupport_emotionality">Social Support Emotionality:</label>
+                <input type="number" class="form-control" name="socialSupport_emotionality" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="socialSupport_appreciation">Social Support Appreciation:</label>
+                <input type="number" class="form-control" name="socialSupport_appreciation" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="socialSupport_instrumental">Social Support Instrumental:</label>
+                <input type="number" class="form-control" name="socialSupport_instrumental" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="empowerment_knowledge">Empowerment Knowledge:</label>
+                <input type="number" class="form-control" name="empowerment_knowledge" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="empowerment_abilities">Empowerment Abilities:</label>
+                <input type="number" class="form-control" name="empowerment_abilities" min="0" required>
+            </div>
+            <div class="form-group">
+                <label for="empowerment_desires">Empowerment Desires:</label>
+                <input type="number" class="form-control" name="empowerment_desires" min="0" required>
+            </div>
+            <button type="submit" class="btn btn-primary btn-block">Predict</button>
+        </form>
+    </div>
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.5.4/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+</body>
+</html>
