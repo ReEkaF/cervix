@@ -2,7 +2,8 @@ from flask import Flask, request, render_template, redirect, url_for
 import pickle
 import numpy as np
 
-# Inisialisasi aplikasi Flask
+# Inisialisasi aplikasi Flask 
+
 app = Flask(__name__)
 application = app
 
